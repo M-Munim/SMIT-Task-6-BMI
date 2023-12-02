@@ -7,10 +7,7 @@ form.addEventListener("submit", function (e) {
     let height = parseInt(document.querySelector("#height").value)
     let weight = parseInt(document.querySelector("#weight").value)
     let result = document.querySelector("#result")
-    let CompDataOne = document.querySelector("#CompDataOne")
-    let CompDataTwo = document.querySelector("#CompDataTwo")
     let bmiMsg = document.querySelector("#bmi_msg")
-    let tableNameOne = document.querySelector("#name")
 
     if (isNaN(height) || height === "" || height < 0) {
         result.value = "Enter a valid height"
@@ -19,7 +16,6 @@ form.addEventListener("submit", function (e) {
     } else {
         var bmi = (weight / ((height * height) / 10000)).toFixed(2)
         result.value = `BMI: ${bmi}`
-        CompDataOne.value = `BMI: ${bmi}`
     }
 
     if (bmi < 18.6) {
