@@ -13,19 +13,42 @@
         <div class="top">
             <img src="static/Imgs/Logo.png" alt="">
         </div>
-        <div class="body">
-            <form action="">
-                <input type="text" id="name" placeholder="Enter Your Name">
-                <input type="number" id="height" placeholder="Height in Cm">
-                <input type="number" id="weight" placeholder="Weigth in KG">
-                <input type="text" id="result" placeholder="">
-                <input type="text" id="bmi_msg" placeholder="">
-                <!-- <div id="result"></div> -->
-                <button type="submit">Calculate</button>
-            </form>
+        <div class="cont">
+            <div class="body">
+                <form id="bmiForm">
+                    <input type="text" id="name" placeholder="Enter Your Name">
+                    <input type="number" id="height" placeholder="Height in Cm">
+                    <input type="number" id="weight" placeholder="Weight in KG">
+                    <input type="text" id="result" placeholder="">
+                    <input type="text" id="bmi_msg" placeholder="">
+                    <button type="submit">Calculate</button>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <table id="bmiTable">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Comparison Table</th>
+                            <th style="height: 55px; font-size: 13px;"> BMI > 24.9 = OverWeight <br>BMI < 18.6 =
+                                UnderWeight <br> Between 18.6 - 24.9 = Normal</th>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Height (cm)</th>
+                            <th>Weight (kg)</th>
+                            <th>BMI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="static/script.js"></script>
 </body>
+
 
 </html>
